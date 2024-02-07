@@ -2,6 +2,7 @@
 *.data
 *.json
 *.cfg
+*.cache
 !setup.cfg
 !cfg/yolov3*.cfg
 

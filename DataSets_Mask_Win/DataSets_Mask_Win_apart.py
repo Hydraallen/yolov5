@@ -6,11 +6,11 @@ import argparse
 
 parser = argparse.ArgumentParser()
 # xml文件的地址，根据自己的数据进行修改 xml一般存放在Annotations下
-parser.add_argument('--xml_path', default='./DataSets/annotations', type=str, help='xml path')
+parser.add_argument('--xml_path', default='../DataSets_Mask_Win/annotations', type=str, help='xml path')
 # xml文件的地址，根据自己的数据进行修改 xml一般存放在Annotations下
-parser.add_argument('--img_path', default='./DataSets/images', type=str, help='img path')
+parser.add_argument('--img_path', default='../DataSets_Mask_Win/images', type=str, help='img path')
 # 数据集划分后txt文件的存储地址，地址选择自己数据下的ImageSets/Main
-parser.add_argument('--txt_path', default='./DataSets/ImageSets/Main', type=str, help='output txt label path')
+parser.add_argument('--txt_path', default='../DataSets_Mask_Win/ImageSets/Main', type=str, help='output txt label path')
 opt = parser.parse_args()
 
 trainval_percent = 0.9 # 训练集和验证集的比例

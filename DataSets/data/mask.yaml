@@ -1,8 +1,0 @@
-train: D:/Anaconda3/envs/yolov/yolov5/DataSets/train.txt
-val: D:/Anaconda3/envs/yolov/yolov5/DataSets/val.txt
-test: D:/Anaconda3/envs/yolov/yolov5/DataSets/test.txt
-nc: 3 #分类个数
-names: ['with_mask;', 'without_mask', 'mask_weared_incorrect'] 
-
-
-

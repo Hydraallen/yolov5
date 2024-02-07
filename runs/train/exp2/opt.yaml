@@ -1,6 +1,6 @@
 weights: yolov5s.pt
-cfg: models/yolov5s_mask.yaml
-data: DataSets\data\mask.yaml
+cfg: ./models/yolov5s_mask.yaml
+data: DataSets_Mask_Win\data\mask.yaml
 hyp:
   lr0: 0.01
   lrf: 0.01
@@ -30,7 +30,7 @@ hyp:
   mosaic: 1.0
   mixup: 0.0
   copy_paste: 0.0
-epochs: 500
+epochs: 10
 batch_size: -1
 imgsz: 640
 rect: false
@@ -69,4 +69,4 @@ bbox_interval: -1
 artifact_alias: latest
 ndjson_console: false
 ndjson_file: false
-save_dir: runs\train\exp7
+save_dir: runs\train\exp2

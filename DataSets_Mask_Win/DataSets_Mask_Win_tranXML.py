@@ -32,8 +32,8 @@ def convert(size, box):
 
 
 def convert_annotation(image_id):
-    in_file = open('./DataSets/annotations/%s.xml' % (image_id), 'r', encoding="UTF-8")
-    out_file = open('./DataSets/labels/%s.txt' % (image_id), 'w')
+    in_file = open('../DataSets_Mask_Win/annotations/%s.xml' % (image_id), 'r', encoding="UTF-8")
+    out_file = open('../DataSets_Mask_Win/labels/%s.txt' % (image_id), 'w')
     tree = ET.parse(in_file)
     root = tree.getroot()
     # 获取图片大小，为后续坐标转换做准备
@@ -76,12 +76,12 @@ def convert_annotation(image_id):
         out_file.write(str(cls_id) + " " + " ".join([str(a) for a in bb]) + '\n')
 
 
-if not os.path.exists('./DataSets/labels/'):  # 创建label文件夹
-    os.makedirs('./DataSets/labels/')
+if not os.path.exists('../DataSets_Mask_Win/labels/'):  # 创建label文件夹
+    os.makedirs('../DataSets_Mask_Win/labels/')
 
 for image_set in sets:
-    image_ids = open('./DataSets/ImageSets/Main/%s.txt' % (image_set)).read().strip().split()
-    list_file = open('./DataSets/%s.txt' % (image_set), 'w')
+    image_ids = open('../DataSets_Mask_Win/ImageSets/Main/%s.txt' % (image_set)).read().strip().split()
+    list_file = open('../DataSets_Mask_Win/%s.txt' % (image_set), 'w')
     for image_id in image_ids:
         list_file.write('./images/%s.png\n' % (image_id))  # 这里最好用全局路径
         convert_annotation(image_id)

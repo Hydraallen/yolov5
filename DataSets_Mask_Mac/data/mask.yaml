@@ -1,0 +1,8 @@
+train: ./DataSets_Mask_Mac/train.txt
+val: ./DataSets_Mask_Mac/val.txt
+test: ./DataSets_Mask_Mac/test.txt
+nc: 3 #分类个数
+names: ['with_mask;', 'without_mask', 'mask_weared_incorrect'] 
+
+
+

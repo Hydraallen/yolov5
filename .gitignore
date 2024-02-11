@@ -3,6 +3,7 @@
 *.json
 *.cfg
 *.cache
+*.npy
 !setup.cfg
 !cfg/yolov3*.cfg
 
